@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meniu | Toggler</title>
+    <style>
+        body {
+            background-color: rgb(169, 46, 1);
+            margin: 0;
+        }
+        .meniu {
+            width: 400px;
+            height: 350px;
+            background-image: url(images/meniu.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 0 10px 10px 0;
+            margin-left: -400px;
+            transition: 0.5s;
+        }
+        .title {
+            color:#FFE4E1;
+            font-size: 30px;
+            font-family:cursive;
+            margin: 0;
+            padding:5px 20px;
+        }
+        .meniu-list {
+            list-style: none;
+            padding: 0;
+        }
+        .meniu:target {
+            margin-left: 0;
+        }
+         .lista {
+            width: 140px;
+        }
+        a {
+            text-decoration: none;
+            padding:5px 0px;
+            margin-left: 30px;
+            display: block;
+            color:darksalmon;
+            font-size: 20px;
+            font-family:cursive;
+        }
+        a::before {
+            content: '║';
+            color:darkmagenta;
+        }
+        a:hover {
+            color: green;
+            width: 140px;
+            background-color:burlywood;
+            border-radius:0 20px 20px 0;
+            box-shadow: 2px 2px 5px 2px gray;
+        }
+        a:hover::before {
+            content: '║';
+            color:crimson;
+        }
+        .toggler {
+            transform: translateX(400px) translateY(-350px);
+            height: 340px;
+            width: 30px;
+            margin-left: 5px;
+            border-radius: 20px;
+            line-height: 50px;
+            background-color:olivedrab;
+            font-family:fantasy;
+            font-size: 20px;
+            color:black;
+            text-align: center;
+        }
+        .toggler::before {
+            display: none;
+        }
+        .toggler:hover {
+            background-color:turquoise;
+            box-shadow: 2px 2px 5px 2px gray;
+            width: 30px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="meniu" id="meniu">
+        <h2 class="title">Secretele bucatariei</h2>
+        <ul class="meniu-list">
+            <li class="lista"><a href="#">PIZZA</a></li>
+            <li class="lista"><a href="#">CIORBE</a></li>
+            <li class="lista"><a href="#">PASTE</a></li>
+            <li class="lista"><a href="#">SALATE</a></li>
+            <li class="lista"><a href="#">GUSTARI</a></li>
+            <li class="lista"><a href="#">DESERTURI</a></li>
+            <li class="lista"><a href="#">BAUTURI</a></li>
+        </ul>
+        <a href="#meniu" class="toggler"><br> M <br> E <br> N <br> I <br> U </a>
+    </nav>
+</body>
+</html>
